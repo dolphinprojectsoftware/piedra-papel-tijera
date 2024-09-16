@@ -4,7 +4,7 @@ const App = () =>{
    // Definir los estilos del titulo
   const headingStyle = {textAlign: 'center'};
   return (
-    <h1 style = {headingStyle}>{title.toUpperCase()}</h1>
+    <h1 style = {headingStyle}>{title}</h1>
   ) 
 }
-export default App;
+export default A
