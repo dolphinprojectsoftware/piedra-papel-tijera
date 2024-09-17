@@ -7,4 +7,4 @@ const App = () =>{
     <h1 style = {headingStyle}>{title}</h1>
   ) 
 }
-export default A
+export default App
