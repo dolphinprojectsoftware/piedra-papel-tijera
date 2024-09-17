@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import '../src/App.css'
 
 const App = () => {
 
@@ -42,15 +43,22 @@ const App = () => {
       <div>
         <h1 style={headingStyle}>{title}</h1>
 
-        <div>
-          <button onClick={() => handleUserChoice("Piedra")}>Piedra</button>
-          <button onClick={() => handleUserChoice("Papel")}>Papel</button>
-          <button onClick={() => handleUserChoice("Tijera")}>Tijera</button>
+        <div className='contenedor-btns'>
+          <button className='btn-opcion-piedra' onClick={() => handleUserChoice("Piedra")}>Piedra 🪨</button>
+          <button className='btn-opcion-papel' onClick={() => handleUserChoice("Papel")}>Papel 📋</button>
+          <button className='btn-opcion-tijera' onClick={() => handleUserChoice("Tijera")}>Tijera ✂️</button>
         </div>
-
-        <h2>Tu elección: {userChoice}</h2>
+        <div className='text-eleccion'>
+        <h2 style={{
+          color: userChoice === "Piedra" ? "green":
+                 userChoice === "Papel" ? "violet":
+                 userChoice === "Tijera" ? "blue": "black"        
+          }}>Tu elección: {userChoice}</h2>
         <h2>Elección del computador: {computerChoice}</h2>
-        <h2>Resultado: {result}</h2>
+        </div>
+        <div className='text-resultado'>
+        <h2 style={{backgroundColor: result === "Ganaste" ? "green" : "red", color: "white"}}>Resultado: {result}</h2>
+        </div>
       </div>
     );
   };

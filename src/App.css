@@ -1,0 +1,87 @@
+*{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.contenedor-btns{  
+    margin-top: 50px;  
+    display: flex;
+    justify-content: center;
+    align-items: center;           
+}
+
+.btn-opcion-piedra{
+    margin: 10px;
+    width: 120px;
+    height: 35px;
+    color: green;
+    background-color: greenyellow;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-opcion-papel{
+    margin: 10px;
+    width: 120px;
+    height: 35px;
+    color: white;
+    background-color: blueviolet;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-opcion-tijera{
+    margin: 10px;
+    width: 120px;
+    height: 35px;
+    color: red;
+    background-color: blue;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-opcion-piedra:hover{
+    transform: scale(1.1);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-opcion-papel:hover{
+    transform: scale(1.1);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-opcion-tijera:hover{
+    transform: scale(1.1);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.text-eleccion{
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-resultado{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h2{
+    margin: 20px;
+}
