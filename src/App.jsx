@@ -44,20 +44,27 @@ const App = () => {
         <h1 style={headingStyle}>{title}</h1>
 
         <div className='contenedor-btns'>
-          <button className='btn-opcion-piedra' onClick={() => handleUserChoice("Piedra")}>Piedra 🪨</button>
-          <button className='btn-opcion-papel' onClick={() => handleUserChoice("Papel")}>Papel 📋</button>
-          <button className='btn-opcion-tijera' onClick={() => handleUserChoice("Tijera")}>Tijera ✂️</button>
+          <button className='btn-opcion-piedra' onClick={() => handleUserChoice("Piedra")}>Piedra🪨</button>
+          <button className='btn-opcion-papel' onClick={() => handleUserChoice("Papel")}>Papel📋</button>
+          <button className='btn-opcion-tijera' onClick={() => handleUserChoice("Tijera")}>Tijera✂️</button>
         </div>
         <div className='text-eleccion'>
         <h2 style={{
           color: userChoice === "Piedra" ? "green":
-                 userChoice === "Papel" ? "violet":
+                 userChoice === "Papel" ? "purple":
                  userChoice === "Tijera" ? "blue": "black"        
           }}>Tu elección: {userChoice}</h2>
-        <h2>Elección del computador: {computerChoice}</h2>
+        <h2 style={{
+          color: computerChoice === "Piedra" ? "green":
+                 computerChoice === "Papel" ? "purple":
+                 computerChoice === "Tijera" ? "blue": "black"        
+          }}>Elección del computador: {computerChoice}</h2>
         </div>
         <div className='text-resultado'>
-        <h2 style={{backgroundColor: result === "Ganaste" ? "green" : "red", color: "white"}}>Resultado: {result}</h2>
+        <h2 style={{
+          backgroundColor: result === "Ganaste" ? "green":
+                           result === "Perdiste" ? "red" : "yellow"
+          }}>Resultado: {result}</h2>
         </div>
       </div>
     );

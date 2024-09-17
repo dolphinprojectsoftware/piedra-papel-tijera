@@ -3,7 +3,7 @@
 }
 
 .contenedor-btns{  
-    margin-top: 50px;  
+    margin-top: 50px; 
     display: flex;
     justify-content: center;
     align-items: center;           
@@ -13,8 +13,8 @@
     margin: 10px;
     width: 120px;
     height: 35px;
-    color: green;
-    background-color: greenyellow;
+    color: white;
+    background-color: green;
     font-size: 20px;
     font-weight: 600;
     border-radius: 10px;
@@ -43,7 +43,7 @@
     margin: 10px;
     width: 120px;
     height: 35px;
-    color: red;
+    color: white;
     background-color: blue;
     font-size: 20px;
     font-weight: 600;
