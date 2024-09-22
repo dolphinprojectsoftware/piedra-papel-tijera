@@ -1,5 +1,8 @@
 import { useState } from 'react';
 import '../src/App.css'
+import Card from 'react-bootstrap/Card';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 const App = () => {
 
@@ -49,22 +52,34 @@ const App = () => {
           <button className='btn-opcion-tijera' onClick={() => handleUserChoice("Tijera")}>Tijera✂️</button>
         </div>
         <div className='text-eleccion'>
-        <h2 style={{
-          color: userChoice === "Piedra" ? "green":
-                 userChoice === "Papel" ? "purple":
-                 userChoice === "Tijera" ? "blue": "black"        
-          }}>Tu elección: {userChoice}</h2>
-        <h2 style={{
-          color: computerChoice === "Piedra" ? "green":
-                 computerChoice === "Papel" ? "purple":
-                 computerChoice === "Tijera" ? "blue": "black"        
-          }}>Elección del computador: {computerChoice}</h2>
+          <Card className='m-3' style={{
+                backgroundColor: userChoice === "Piedra" ? "green":
+                       userChoice === "Papel" ? "purple":
+                       userChoice === "Tijera" ? "blue": "black"        
+              }}>
+            <Card.Body>
+              <h2 style={{color:'white'}}>Tu elección: {userChoice}</h2>
+            </Card.Body>
+          </Card>
+          <Card style={{
+                backgroundColor: computerChoice === "Piedra" ? "green":
+                       computerChoice === "Papel" ? "purple":
+                       computerChoice === "Tijera" ? "blue": "black"        
+              }}>
+            <Card.Body>
+              <h2 style={{color:'white'}}>Elección del computador: {computerChoice}</h2>
+            </Card.Body>
+          </Card>
         </div>
         <div className='text-resultado'>
-        <h2 style={{
-          backgroundColor: result === "Ganaste" ? "green":
-                           result === "Perdiste" ? "red" : "yellow"
-          }}>Resultado: {result}</h2>
+          <Card className='m-3' style={{
+            backgroundColor: result === "Ganaste" ? "green" :
+                             result === "Perdiste" ? "red" : "orange"
+          }}>
+            <Card.Body>
+              <h2 style={{color: 'white'}}>Resultado: {result}</h2>
+            </Card.Body>
+          </Card>
         </div>
       </div>
     );
